@@ -4,6 +4,7 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1/lib/p5.js"></script>
     <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
     <script src="sketch.js"></script>
+    <title>Emotion Translator</title>
     <style>
       * {
         box-sizing: border-box;
@@ -20,9 +21,115 @@
         height: 100vh;
         overflow: hidden;
       }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+
+      /* Style the header */
+     .header {
+        padding: 100px;
+        text-align: center;
+       background: #1abc9c;
+        color: white;
+      }
+
+      /* Increase the font size of the h1 element */
+      .header h1 {
+      font-size: 40px;
+      }
+
+      .header h5 {
+      font-size: 18px;
+      }
+
+      p {
+      font-size: 14px;
+      }
+
+      
+      .row1 {  
+        background-color: #ffffff;
+        padding: 50px;
+        margin-left: 15%;
+        margin-right: 15%;
+        color: #333333;
+      }
+
+      /* Column container */
+      .row2 {  
+        display: flex;
+        flex-wrap: wrap;
+        background: #1abc9c;
+        color: white;
+        padding: 15px;
+      }
+
+      /* Create two unequal columns that sits next to each other */
+      /* Sidebar/left column */
+      .large {
+      flex: 60%;
+      padding: 20px;
+      }
+
+      /* Main column */
+      .small {   
+      flex: 40%;
+      padding: 20px;
+      }
+
+      /* The Button Link */
+        a:link, a:visited {
+        background-color: #ffffff;
+        color: #1abc9c;
+        padding: 10px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+         margin: 4px 2px;
+        }
+
+
     </style>
   </head>
   <body>
+    <div class="header">
+      <h1>Emotion Translator</h1>
+      <h4>&#128512; Welcome</h4>
+      </p>
+    </div>
+
+    <div class="row1">
+      <h5>&#128514; &#128532; &#128545; Neurotypical people often communicate their thoughts and emotions through their facial expressions.
+        This AI model can provide some suggestions on what a neurotypical person may be feeling
+        based on an image or live video of their face.</h5>
+         <p>
+          &#129488; Remember, expressions can vary across cultures, individuals and contexts,
+          and AI models also struggle to reliably identify feelings. This AI can only provide a rough estimate.
+          If it feels right to you, you can consider asking, "I'm sensing you are feeling [insert emotion].
+          Would you be comfortable talking about that?"
+         </p>
+    </div>
+
+    <div class="row2">
+      <div class="large">
+        <h2>Neurotypical Responses</h2>
+        <p>To use this model, first ask if the other person is comfortable
+           sharing their face on your <br> camera, with your AI model.
+           If they say yes, ask them to move into the camera frame.
+          </p>
+      </div>
+      <div class="small">
+        <h2>My Responses</h2>
+        <p>Neurotypical folks are also responsible for understanding neurodiverse responses.
+          Train your own AI model to understand your own unique responses, and give feedback to your family and friends.</p>
+        <h5>Follow the link below to create your own model:</h5>
+        <a href="https://teachablemachine.withgoogle.com/" target="_blank">Google Teachable Machine</a>
+      </div>
+    </div>
+
     <main id="main"></main>
   </body>
 </html>
